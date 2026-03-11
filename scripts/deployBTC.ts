@@ -1,15 +1,24 @@
-import { ethers } from "hardhat";
+import { ethers } from "ethers";
+import hre from "hardhat";
 
 async function main() {
-  const BTC = await ethers.getContractFactory("BTC");
-  const BTC = await BTC.deploy();
+  const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
 
-  await BTC.waitForDeployment();
+  const signer = await provider.getSigner();
 
-  console.log("BTC deployed to:", await BTC.getAddress());
+  const artifact = await hre.artifacts.readArtifact("FakeBTC");
+
+  const factory = new ethers.ContractFactory(
+    artifact.abi,
+    artifact.bytecode,
+    signer,
+  );
+
+  const contract = await factory.deploy();
+
+  await contract.waitForDeployment();
+
+  console.log("FakeBTC deployed at:", await contract.getAddress());
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+main().catch(console.error);
