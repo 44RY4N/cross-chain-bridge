@@ -8,7 +8,7 @@ export default {
       colors: {
         babyPink: "#ffc6da",
         cream: "#fff7ed",
-        pastelBlue: "#dbeafe",
+        pastelBlue: "#0bc0cd",
       },
     },
   },
