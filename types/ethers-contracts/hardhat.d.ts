@@ -10,13 +10,13 @@ import * as Contracts from "./index.js";
 
 declare module "@nomicfoundation/hardhat-ethers/types" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
-  getContractFactory(name: 'FakeBTC', signerOrOptions?: ethers.Signer | FactoryOptions): Promise<Contracts.FakeBTC__factory>
+  getContractFactory(name: 'BTC', signerOrOptions?: ethers.Signer | FactoryOptions): Promise<Contracts.BTC__factory>
 
-  getContractAt(name: 'FakeBTC', address: string | ethers.Addressable, signer?: ethers.Signer): Promise<Contracts.FakeBTC>
+  getContractAt(name: 'BTC', address: string | ethers.Addressable, signer?: ethers.Signer): Promise<Contracts.BTC>
 
-  deployContract(name: 'FakeBTC', signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.FakeBTC>
+  deployContract(name: 'BTC', signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.BTC>
 
-  deployContract(name: 'FakeBTC', args: any[], signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.FakeBTC>
+  deployContract(name: 'BTC', args: any[], signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.BTC>
 
     // default types
     getContractFactory(

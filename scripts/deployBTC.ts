@@ -6,7 +6,7 @@ async function main() {
 
   const signer = await provider.getSigner();
 
-  const artifact = await hre.artifacts.readArtifact("FakeBTC");
+  const artifact = await hre.artifacts.readArtifact("BTC");
 
   const factory = new ethers.ContractFactory(
     artifact.abi,
@@ -18,7 +18,7 @@ async function main() {
 
   await contract.waitForDeployment();
 
-  console.log("FakeBTC deployed at:", await contract.getAddress());
+  console.log("BTC deployed at:", await contract.getAddress());
 }
 
 main().catch(console.error);
