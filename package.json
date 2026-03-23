@@ -10,8 +10,16 @@
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^4.0.6",
-    "@nomicfoundation/hardhat-ignition": "^3.0.9",
+    "@nomicfoundation/hardhat-ethers-chai-matchers": "^3.0.3",
+    "@nomicfoundation/hardhat-ignition": "^3.1.0",
+    "@nomicfoundation/hardhat-ignition-ethers": "^3.1.0",
+    "@nomicfoundation/hardhat-keystore": "^3.0.5",
+    "@nomicfoundation/hardhat-mocha": "^3.0.14",
+    "@nomicfoundation/hardhat-network-helpers": "^3.0.4",
     "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.3",
+    "@nomicfoundation/hardhat-typechain": "^3.0.4",
+    "@nomicfoundation/hardhat-verify": "^3.0.12",
+    "@nomicfoundation/ignition-core": "^3.1.0",
     "@types/chai": "^5.2.3",
     "@types/chai-as-promised": "^8.0.2",
     "@types/mocha": "^10.0.10",
@@ -26,5 +34,13 @@
   },
   "dependencies": {
     "20": "^3.1.9"
-  }
+  },
+  "description": "This project showcases a Hardhat 3 Beta project using `mocha` for tests and the `ethers` library for Ethereum interactions.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
